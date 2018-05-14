@@ -1,14 +1,12 @@
 package com.targetrecruiting.rest.model;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.stereotype.Component;
 
-@Document(collection="productprice")
+//@Document(collection="productprice")
 @Component
 public class ProductPrice {
 	
-	@Id
+	//@Id
 	private String id;
 	private String price;
 	private String currencyCode;
