@@ -1,43 +1,50 @@
 package com.targetrecruiting.rest.model;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.stereotype.Component;
 
-//@Document(collection="productprice")
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+@Document(collection="productprice")
 @Component
 public class ProductPrice {
 	
-	//@Id
+	@Id
 	private String id;
-	private String price;
-	private String currencyCode;
+	private String productId;
+	private String value;
+	private String currency_code;
 	
-	public ProductPrice() {
-		
-	}
-	
-	/*public ProductPrice(String id, String price, String currencyCode) {
-		this.id=id;
-		this.price=price;
-		this.currencyCode=currencyCode;
-	}*/
-	
+	@JsonIgnore
 	public String getId() {
 		return id;
 	}
-	public void setId(String id) {
-		this.id = id;
+	
+	@JsonIgnore
+	public String getProductId() {
+		return productId;
 	}
-	public String getPrice() {
-		return price;
+	public void setProductId(String productId) {
+		this.productId = productId;
 	}
-	public void setPrice(String price) {
-		this.price = price;
+	public String getValue() {
+		return value;
 	}
-	public String getCurrencyCode() {
-		return currencyCode;
+	public void setValue(String value) {
+		this.value = value;
 	}
-	public void setCurrencyCode(String currencyCode) {
-		this.currencyCode = currencyCode;
+	public String getCurrency_code() {
+		return currency_code;
+	}
+	public void setCurrency_code(String currency_code) {
+		this.currency_code = currency_code;
+	}
+
+	@Override
+	public String toString() {
+		return "ProductPrice [id=" + id + ", productId=" + productId + ", value=" + value + ", currency_code="
+				+ currency_code + "]";
 	}
 	
 }

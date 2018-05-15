@@ -2,25 +2,20 @@ package com.targetrecruiting.rest.model;
 
 import org.springframework.stereotype.Component;
 
+
 @Component
 public class ProductDetails {
 	
-	public ProductDetails() {
-		
-	}
-	
 	private String id;
-      
-	private ProductPrice priceInfo;
-	
 	private String name;
+	private ProductPrice current_price;
 
-	public ProductPrice getPriceInfo() {
-		return priceInfo;
+	public ProductPrice getCurrent_price() {
+		return current_price;
 	}
 
-	public void setPriceInfo(ProductPrice priceInfo) {
-		this.priceInfo = priceInfo;
+	public void setCurrent_price(ProductPrice current_price) {
+		this.current_price = current_price;
 	}
 
 	public String getName() {
@@ -37,6 +32,11 @@ public class ProductDetails {
 
 	public void setId(String id) {
 		this.id = id;
+	}
+
+	@Override
+	public String toString() {
+		return "ProductDetails [id=" + id + ", name=" + name + ", current_price=" + current_price + "]";
 	}
 	
 }
