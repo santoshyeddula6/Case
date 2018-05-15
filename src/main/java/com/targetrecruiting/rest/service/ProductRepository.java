@@ -1,4 +1,4 @@
-package com.targetrecruiting.rest.repository;
+package com.targetrecruiting.rest.service;
 
 
 import org.springframework.data.mongodb.repository.MongoRepository;

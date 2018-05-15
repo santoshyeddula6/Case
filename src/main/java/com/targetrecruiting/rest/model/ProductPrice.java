@@ -16,6 +16,7 @@ public class ProductPrice {
 	private String value;
 	private String currency_code;
 	
+	
 	@JsonIgnore
 	public String getId() {
 		return id;

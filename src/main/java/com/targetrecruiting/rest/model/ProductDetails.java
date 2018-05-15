@@ -9,6 +9,16 @@ public class ProductDetails {
 	private String id;
 	private String name;
 	private ProductPrice current_price;
+	
+	public ProductDetails(){
+		
+	}
+	
+	public ProductDetails(String id, String name, ProductPrice currentPrice){
+		this.id =id;
+		this.name=name;
+		current_price = currentPrice;
+	}
 
 	public ProductPrice getCurrent_price() {
 		return current_price;

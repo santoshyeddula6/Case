@@ -15,11 +15,11 @@ import org.springframework.web.client.RestTemplate;
 import com.targetrecruiting.rest.model.ProductData;
 
 @Service
-public class RestClient {
-	private static final Logger log = LogManager.getLogger(RestClient.class);
+public class RestClientServiceImpl implements RestClientService {
+	private static final Logger log = LogManager.getLogger(RestClientServiceImpl.class);
 	private final RestTemplate restTemplate;
 
-	public RestClient(RestTemplateBuilder builder) {
+	public RestClientServiceImpl(RestTemplateBuilder builder) {
 		this.restTemplate = builder.build();
 	}
 
