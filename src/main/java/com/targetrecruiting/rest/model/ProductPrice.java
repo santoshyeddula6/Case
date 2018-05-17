@@ -16,6 +16,15 @@ public class ProductPrice {
 	private String value;
 	private String currency_code;
 	
+	public ProductPrice(){
+		
+	}
+	
+	public ProductPrice(String productId,String value, String currencyCode){
+		this.productId = productId;
+		this.value = value;
+		this.currency_code = currencyCode;
+	}
 	
 	@JsonIgnore
 	public String getId() {
