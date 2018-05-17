@@ -24,13 +24,11 @@ public class ProductController {
 	private String url;
 	
 	@Autowired
-	private ProductDetails product;
-	
-	@Autowired
 	private ServiceManager manager;
 	
 	@RequestMapping(method=RequestMethod.GET, value="/products/{id}")
     public ProductDetails getProductInfo(@PathVariable String id) {
+		ProductDetails product = new ProductDetails();
 		logger.debug("getProductInfo : "+id);
 		Item item = manager.externalRestCall(url, id);
 		product.setName(item.getDescription().getTitle());
